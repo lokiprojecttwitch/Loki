@@ -1,21 +1,17 @@
 package loki;
 
+import javax.swing.JOptionPane;
+
 public class Variaveis {
 
-	public String nomeUsuario;
-	public String senhaUsuario;
-	public String url;
-	public String caminho;
-	
-	public String getCaminho() {
-		return caminho;
-	}
+	private String nomeUsuario;
+	private String senhaUsuario;
+	private String url;
 
-	public void setCaminho(String caminho) {
-		this.caminho = caminho;
-	}
+	
 
 	public String getSenhaUsuario() {
+		this.senhaUsuario = JOptionPane.showInputDialog("Insira sua senha: ");
 		return senhaUsuario;
 	}
 
@@ -24,6 +20,7 @@ public class Variaveis {
 	}
 
 	public String getUrl() {
+		this.url = JOptionPane.showInputDialog("Insira a URL do seu canal desejado: ");
 		return url;
 	}
 
@@ -32,6 +29,7 @@ public class Variaveis {
 	}
 	
 	public String getNomeUsuario() {
+		this.nomeUsuario = JOptionPane.showInputDialog("Insira seu nome de usuário: ");
 		return nomeUsuario;
 	}
 
