@@ -31,10 +31,11 @@ public class Principal {
 		driver.findElement(By.cssSelector(".tw-relative:nth-child(2) > .tw-pd-l-1")).sendKeys(nomeUsuraio);
 		driver.findElement(By.cssSelector(".tw-relative:nth-child(1) > .tw-border-bottom-left-radius-medium")).sendKeys(senhaUsuario);
 		driver.findElement(By.cssSelector(".tw-mg-t-2 > .tw-button")).click();
-		//WebElement waitmature = wait.until(ExpectedConditions.elementToBeClickable(By.id("mature-link")));
-		//driver.findElement(By.id("mature-link")).click();
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.id("mature-link")));
+		driver.findElement(By.id("mature-link")).click();
 		WebElement waitBau = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".icon > .vsc-initialized")));
 		driver.findElement(By.cssSelector(".icon > .vsc-initialized")).click();
+		
 		
 		
 

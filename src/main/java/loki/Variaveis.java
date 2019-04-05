@@ -1,6 +1,9 @@
 package loki;
 
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 
 public class Variaveis {
 
@@ -11,7 +14,15 @@ public class Variaveis {
 	
 
 	public String getSenhaUsuario() {
-		this.senhaUsuario = JOptionPane.showInputDialog("Insira sua senha: ");
+		JPasswordField password = new JPasswordField(10);
+		password.setEchoChar('*'); 
+		JLabel rotulo = new JLabel("Insira a senha do usuario:");
+		JPanel entUsuario = new JPanel();
+		entUsuario.add(rotulo);
+		entUsuario.add(password);
+		JOptionPane.showMessageDialog(null, entUsuario, "Entrada", JOptionPane.PLAIN_MESSAGE);
+		String senha = password.getText();
+		this.senhaUsuario = senha;
 		return senhaUsuario;
 	}
 
